@@ -1,0 +1,152 @@
+$tab-w: 1200px;
+$mob-w: 920px;
+$small-w: 500px;
+
+@mixin border {
+	$red: random(256)-1;
+	$green: random(256)-1;
+	$blue: random(256)-1;
+ 	border: 1px solid red;
+ 	border-color: rgb($red, $green, $blue);
+}
+
+@mixin placeholder-color($color) {
+	&::-webkit-input-placeholder { /* WebKit browsers */
+	  color: $color;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	  color: $color;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+	  color: $color;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+	  color: $color;
+	}
+}
+
+/* Fonts */
+
+/* Fonts */
+@font-face { 
+  	font-family: 'CervoNeue-black'; 
+  	src: url('../fonts/CervoNeue-black.otf') format('truetype'); 
+} 
+@mixin f-bl {
+	font-family: 'CervoNeue-black';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-bold'; 
+  	src: url('../fonts/CervoNeue-bold.otf') format('truetype'); 
+} 
+@mixin f-b {
+	font-family: 'CervoNeue-bold';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-light'; 
+  	src: url('../fonts/CervoNeue-light.otf') format('truetype'); 
+} 
+@mixin f-l {
+	font-family: 'CervoNeue-light';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-medium'; 
+  	src: url('../fonts/CervoNeue-medium.otf') format('truetype'); 
+} 
+@mixin f-m {
+	font-family: 'CervoNeue-medium';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-regular'; 
+  	src: url('../fonts/CervoNeue-regular.otf') format('truetype'); 
+} 
+@mixin f-r {
+	font-family: 'CervoNeue-regular';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-semi-bold'; 
+  	src: url('../fonts/CervoNeue-semi-bold.otf') format('truetype'); 
+} 
+@mixin f-sb {
+	font-family: 'CervoNeue-semi-bold';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-extra-bold'; 
+  	src: url('../fonts/CervoNeue-extra-bold.otf') format('truetype'); 
+} 
+@mixin f-xb {
+	font-family: 'CervoNeue-extra-bold';
+}
+
+@font-face { 
+  	font-family: 'CervoNeue-thin'; 
+  	src: url('../fonts/CervoNeue-thin.otf') format('truetype'); 
+} 
+@mixin f-t {
+	font-family: 'CervoNeue-thin';
+}
+/* /Fonts */
+
+
+
+
+/* Global */
+html {
+	margin: 0 !important;
+}
+body {
+	position: relative;
+	margin: 0;
+  	padding: 0;
+  	font-size: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	direction: ltr;
+}
+
+p {
+    margin: 0;
+}
+ul {
+	-webkit-padding-start: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+section {
+	width: 100%;
+	max-width: 1920px;
+	margin: auto;	
+	overflow: hidden;
+	font-size: 18px;
+}
+
+.section-inner {
+	max-width: 1386px;
+	padding: 0 10px;
+	width: 100%;
+	margin: auto;
+}
+
+.section-inner.wide {
+	max-width: 1880px;
+}
+
+.section-inner.wider {
+	max-width: 1620px;
+}
+
+@import 'index';
+@import 'inner';
